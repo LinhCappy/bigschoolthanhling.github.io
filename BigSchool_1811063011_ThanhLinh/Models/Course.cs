@@ -9,6 +9,12 @@ namespace BigSchool_1811063011_ThanhLinh.Models
     [Table("Course")]
     public partial class Course
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Course()
+        {
+            Attendances = new HashSet<Attendance>();
+        }
+
         public int Id { get; set; }
 
         [Required]
@@ -23,9 +29,9 @@ namespace BigSchool_1811063011_ThanhLinh.Models
 
         public int CategoryId { get; set; }
 
-        public virtual Category Category { get; set; }
-        public string Name;
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Attendance> Attendances { get; set; }
 
-        public List<Category> ListCategory = new List<Category>();
+        public virtual Category Category { get; set; }
     }
 }
