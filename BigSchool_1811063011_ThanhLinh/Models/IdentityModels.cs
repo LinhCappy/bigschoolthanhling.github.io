@@ -10,6 +10,7 @@ namespace BigSchool_1811063011_ThanhLinh.Models
     public class ApplicationUser : IdentityUser
     {
         public object NAMEs { get; internal set; }
+        public string Name { get; internal set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

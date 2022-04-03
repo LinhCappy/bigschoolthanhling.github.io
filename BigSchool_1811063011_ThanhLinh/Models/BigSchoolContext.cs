@@ -8,7 +8,7 @@ namespace BigSchool_1811063011_ThanhLinh.Models
     public partial class BigSchoolContext : DbContext
     {
         public BigSchoolContext()
-            : base("name=BigSchoolContext1")
+            : base("name=BigSchoolContext2")
         {
         }
 

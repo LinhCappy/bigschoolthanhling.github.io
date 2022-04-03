@@ -10,18 +10,18 @@ using BigSchool_1811063011_ThanhLinh.Models;
 
 namespace BigSchool_1811063011_ThanhLinh.Controllers
 {
-    public class CoursesController : Controller
+    public class BaiController : Controller
     {
         private BigSchoolContext db = new BigSchoolContext();
 
-        // GET: Courses
+        // GET: Bai
         public ActionResult Index()
         {
             var courses = db.Courses.Include(c => c.Category);
             return View(courses.ToList());
         }
 
-        // GET: Courses/Details/5
+        // GET: Bai/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,14 +36,14 @@ namespace BigSchool_1811063011_ThanhLinh.Controllers
             return View(course);
         }
 
-        // GET: Courses/Create
+        // GET: Bai/Create
         public ActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name");
             return View();
         }
 
-        // POST: Courses/Create
+        // POST: Bai/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -61,7 +61,7 @@ namespace BigSchool_1811063011_ThanhLinh.Controllers
             return View(course);
         }
 
-        // GET: Courses/Edit/5
+        // GET: Bai/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -77,7 +77,7 @@ namespace BigSchool_1811063011_ThanhLinh.Controllers
             return View(course);
         }
 
-        // POST: Courses/Edit/5
+        // POST: Bai/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -94,7 +94,7 @@ namespace BigSchool_1811063011_ThanhLinh.Controllers
             return View(course);
         }
 
-        // GET: Courses/Delete/5
+        // GET: Bai/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -109,7 +109,7 @@ namespace BigSchool_1811063011_ThanhLinh.Controllers
             return View(course);
         }
 
-        // POST: Courses/Delete/5
+        // POST: Bai/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

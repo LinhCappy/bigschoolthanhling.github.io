@@ -170,13 +170,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ApiController.cs" />
-    <Compile Include="Controllers\AttendancesController.cs" />
-    <Compile Include="Controllers\CoursesController.cs" />
-    <Compile Include="Controllers\Couser1Controller.cs" />
-    <Compile Include="Controllers\FlowwingController.cs" />
+    <Compile Include="Controllers\BaiController.cs" />
+    <Compile Include="Controllers\CousesController.cs" />
+    <Compile Include="Controllers\FollowingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\IHttpActionResult.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -214,10 +211,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <None Include="Views\Cousers\Attending.cshtml" />
     <Content Include="Views\Cousers\Create.cshtml" />
-    <None Include="Views\Cousers\LectureIamGoing.cshtml" />
-    <None Include="Views\Cousers\Mine.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -252,16 +246,18 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Courses\Create.cshtml" />
-    <Content Include="Views\Courses\Delete.cshtml" />
-    <Content Include="Views\Courses\Details.cshtml" />
-    <Content Include="Views\Courses\Edit.cshtml" />
-    <Content Include="Views\Courses\Index.cshtml" />
+    <Content Include="Views\Bai\Create.cshtml" />
+    <Content Include="Views\Bai\Delete.cshtml" />
+    <Content Include="Views\Bai\Details.cshtml" />
+    <Content Include="Views\Bai\Edit.cshtml" />
+    <Content Include="Views\Bai\Index.cshtml" />
+    <Content Include="Views\Cousers\Attending.cshtml" />
+    <Content Include="Views\Cousers\Mine.cshtml" />
+    <Content Include="Views\Cousers\LectureIamGoing.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Attendances\" />
-    <Folder Include="Views\Couser1\" />
+    <Folder Include="Views\Following\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

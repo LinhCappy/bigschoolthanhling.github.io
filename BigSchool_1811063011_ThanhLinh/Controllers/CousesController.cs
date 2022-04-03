@@ -9,10 +9,11 @@ using System.Web.Mvc;
 
 namespace BigSchool_1811063011_ThanhLinh.Controllers
 {
-    public class Couser1Controller : Controller
+    public class CousesController : Controller
     {
-
-        public class CousersController : Controller
+        // GET: Couses
+       
+            public class CousersController : Controller
         {
             // GET: Cousers
             public ActionResult Create()
@@ -64,7 +65,7 @@ namespace BigSchool_1811063011_ThanhLinh.Controllers
                 var courses = context.Courses.Where(c => c.LecturerId == currentUser.Id && c.Datetime > DateTime.Now).ToList();
                 foreach (Course i in courses)
                 {
-                    i.LecturerName = currentUser.Name;
+                    i.LecturerName = currentUser.UserName;
                 }
                 return View(courses);
             }

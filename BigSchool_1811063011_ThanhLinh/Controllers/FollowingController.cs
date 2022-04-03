@@ -1,15 +1,22 @@
 ﻿using BigSchool_1811063011_ThanhLinh.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web.Mvc;
+using System.Web.Http;
 
-namespace _1811063046_HoangPhuongNam_BigSchool.Controllers
+
+namespace BigSchool_1811063011_ThanhLinh.Controllers
 {
     public class FollowingController : ApiController
+
     {
         [HttpPost]
         public IHttpActionResult Follow(Following follow)
@@ -35,19 +42,5 @@ namespace _1811063046_HoangPhuongNam_BigSchool.Controllers
             return Ok();
         }
 
-        private IHttpActionResult Ok()
-        {
-            throw new NotImplementedException();
-        }
-
-        private IHttpActionResult Ok(string v)
-        {
-            throw new NotImplementedException();
-        }
-
-        private IHttpActionResult BadRequest(string v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
